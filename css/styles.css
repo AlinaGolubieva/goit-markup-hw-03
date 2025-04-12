@@ -254,7 +254,7 @@ button {
 
 .portfolio-list-item {
   border: 1px solid #e7e9fc;
-  width: 360px;
+  width: calc((100%-5 * 24px) / 6);
   height: 420px;
 }
 
