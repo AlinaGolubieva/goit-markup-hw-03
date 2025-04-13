@@ -181,7 +181,7 @@ button {
 }
 
 .solution-list {
-  width: calc((100%-3 * 24px) / 4);
+  width: calc((100% - 72px) / 4);
 }
 
 .solutions-title {
@@ -284,6 +284,7 @@ button {
 
 .container-portfolio-text {
   border: 1px solid #e7e9fc;
+  border-top: none;
   padding: 32px 16px;
 }
 
