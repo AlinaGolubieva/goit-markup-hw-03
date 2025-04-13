@@ -37,7 +37,7 @@ img {
   margin: 0 auto;
 }
 /* Header */
-header {
+.header {
   background-color: #ffffff;
   border-bottom: 1px solid #e7e9fc;
 }
@@ -81,7 +81,7 @@ span {
 
 .header-list-item {
   display: block;
-  padding: 24px;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -121,7 +121,7 @@ span {
 }
 
 .banner-title {
-  width: 496px;
+  max-width: 496px;
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
@@ -137,13 +137,14 @@ button {
   margin: 0 auto;
   display: block;
   border-radius: 4px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
 }
 
 .button-service {
   font-family: "Roboto", sans-serif;
   background: #4d5ae5;
+  border: none;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.04em;
@@ -158,13 +159,33 @@ button {
 }
 
 /* Main section solutions */
+.section-solutions {
+  padding: 120px 0;
+}
 .solutions {
   display: flex;
   gap: 24px;
-  padding: 120px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.solution-list {
+  width: calc((100%-3 * 24px) / 4);
 }
 
 .solutions-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
@@ -177,7 +198,6 @@ button {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
-  width: calc((100%-3 * 24px) / 4);
 }
 
 /* Main section our time */
@@ -209,10 +229,11 @@ button {
 }
 
 .time-text-container {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .time-persons {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
@@ -253,8 +274,7 @@ button {
 }
 
 .portfolio-list-item {
-  border: 1px solid #e7e9fc;
-  width: calc((100%-5 * 24px) / 6);
+  width: calc((100% - 48px) / 3);
   height: 420px;
 }
 
@@ -263,10 +283,12 @@ button {
 }
 
 .container-portfolio-text {
+  border: 1px solid #e7e9fc;
   padding: 32px 16px;
 }
 
 .portfolio-products {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
@@ -281,16 +303,15 @@ button {
   color: #434455;
 }
 
+/* Footer */
 .footer {
+  padding: 100px 0;
   background: #2e2f42;
 }
 
-/* Footer */
-.footer {
-  padding: 100px 156px;
-}
-
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -305,7 +326,6 @@ button {
 }
 
 .footer-text {
-  margin-top: 16px;
   width: 264px;
   font-weight: 400;
   line-height: 150%;
